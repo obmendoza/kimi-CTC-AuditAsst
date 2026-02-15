@@ -9,16 +9,13 @@ import ActivityTimeline from './components/ActivityTimeline';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 bg-mesh-light">
+    <div className="min-h-screen bg-[#0f1117]">
       <Header />
       <main className="px-4 sm:px-6 lg:px-8 py-6 pb-24">
         <div className="max-w-7xl mx-auto space-y-6">
-          {/* AI Assistant - full width hero */}
           <div className="animate-fade-in-up">
             <AIAssistantPanel />
           </div>
-
-          {/* Loan Summary + Stats side by side on desktop */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <div className="lg:col-span-2">
               <LoanSummaryCard />
@@ -27,14 +24,10 @@ const App = () => {
               <StatsGrid />
             </div>
           </div>
-
-          {/* Conditions + Documents side by side on desktop */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <ConditionsPanel />
             <DocumentsPanel />
           </div>
-
-          {/* Risk + Activity side by side on desktop */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <RiskAssessmentPanel />
             <ActivityTimeline />
